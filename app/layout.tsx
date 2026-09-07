@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./components.css";
 
-const siteUrl = "https://protein-calculator.example.com";
+// Updated to match your actual live Vercel deployment URL
+const siteUrl = "https://vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -40,6 +41,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  // Added the verification field here
+  verification: {
+    google: "p8huiWZrD_0F7zx8cbdNwzX8s4t3QuVGjd6W0aXQD0U",
   },
 };
 
