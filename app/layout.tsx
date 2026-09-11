@@ -3,7 +3,7 @@ import "./globals.css";
 import "./components.css";
 
 // Updated to match your actual live Vercel deployment URL
-const siteUrl = "https://vercel.app";
+const siteUrl = "https://yourproteinintake.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
