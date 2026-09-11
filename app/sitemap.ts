@@ -1,11 +1,20 @@
 import type { MetadataRoute } from 'next'
 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
+const BASE_URL = 'https://yourproteinintake.vercel.app'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: BASE_URL,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
     },
-    sitemap: 'https://yourproteinintake.vercel.app/sitemap.xml',
-  }
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+  ]
 }
