@@ -1,20 +1,11 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next'
 
-const siteUrl = "https://protein-calculator.example.com";
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
     },
-    {
-      url: `${siteUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+    sitemap: 'https://yourproteinintake.vercel.app/sitemap.xml',
+  }
 }
